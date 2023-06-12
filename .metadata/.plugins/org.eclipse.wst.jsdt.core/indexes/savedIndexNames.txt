@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\Gaurav Agarwal\workspace_SimpliLearn_Phase2_Devaire\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+127280995.index
+566214629.index
+915178551.index
+4279237768.index
+2683685353.index
+2421985546.index
