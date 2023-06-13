@@ -8,7 +8,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloWorld</servlet-name>
-    <url-pattern>/HelloWorld</url-pattern>
+    <url-pattern>/First</url-pattern>
   </servlet-mapping>
   <display-name>ServletTutorial</display-name>
   <welcome-file-list>
@@ -28,5 +28,25 @@
   <servlet-mapping>
     <servlet-name>HelloWorld1</servlet-name>
     <url-pattern>/HelloWorld1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GenericServletExample</display-name>
+    <servlet-name>GenericServletExample</servlet-name>
+    <servlet-class>GenericServletExample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GenericServletExample</servlet-name>
+    <url-pattern>/GenericServletExample</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletFormExample</display-name>
+    <servlet-name>ServletFormExample</servlet-name>
+    <servlet-class>ServletFormExample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletFormExample</servlet-name>
+    <url-pattern>/ServletFormExample</url-pattern>
   </servlet-mapping>
 </web-app>

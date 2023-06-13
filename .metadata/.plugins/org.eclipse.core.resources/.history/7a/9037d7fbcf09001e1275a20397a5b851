@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>HTTP Servlet Form Example</h2>
+<form method="get" action="ServletFormExample">
+	Name: <input type="text" id="name" name="name"><br><br>
+	Email: <input type="email" id="email" name = "email"><br><br>
+	
+	<input type="submit" value="Submit">
+</form>
+</body>
+</html>
