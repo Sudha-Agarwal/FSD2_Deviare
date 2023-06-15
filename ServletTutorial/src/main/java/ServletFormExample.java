@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 /**
  * Servlet implementation class ServletFormExample
  */
+@WebServlet("/ServletFormExample")
 public class ServletFormExample extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -47,9 +48,7 @@ public class ServletFormExample extends HttpServlet {
 		out.print("<h2>Form Data received</h2>");
 		out.print("<p>Name: " + name + "</p>");
 		out.print("<p>Email: " + email + "</p>");
-		out.print("</body></html>");
-		
-		
+		out.print("</body></html>");	
 		
 	}
 
