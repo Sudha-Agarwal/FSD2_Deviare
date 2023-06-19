@@ -1,6 +1,8 @@
 package DAO;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import Classes.Employee;
 
@@ -56,6 +58,38 @@ public class EmployeeDAO {
 		}
 		
 		return result;	
+		
+	}
+	
+	public static List<Employee> getAllEmployeeCallable(){
+		List<Employee> list = new ArrayList<>();
+		
+		try {
+			Connection con = EmployeeDAO.getConnection();
+			
+			CallableStatement stmt = con.prepareCall("{call GetEmployeeDetails}");
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()) {
+				Employee emp = new Employee();
+				emp.id = rs.getInt(1);
+				emp.firstName = rs.getString(2);
+				emp.lastName = rs.getString(3);
+				emp.userName = rs.getString(4);
+				emp.password = rs.getString(5);
+				emp.address = rs.getString(6);
+				emp.contact = rs.getString(7);
+				
+				list.add(emp);						
+			}	
+			con.close();
+			
+		}
+		catch(Exception e) {
+			
+		}
+		return list;
+		
 		
 	}
 	

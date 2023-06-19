@@ -44,7 +44,7 @@ public class saveServlet extends HttpServlet {
 		
 		if(result!=0) {
 			out.print("Record inserted successfully");
-			RequestDispatcher rd = request.getRequestDispatcher("employeeregister.html");
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
 			rd.include(request, response);			
 		}
 		else {

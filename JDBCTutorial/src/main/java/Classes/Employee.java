@@ -1,7 +1,7 @@
 package Classes;
 
 public class Employee {
-	int id;
+	public int id;
 	public String firstName;
 	public String lastName;
 	public String userName;

@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>viewServlet</display-name>
+    <servlet-name>viewServlet</servlet-name>
+    <servlet-class>servlet.viewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewServlet</servlet-name>
+    <url-pattern>/viewServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
