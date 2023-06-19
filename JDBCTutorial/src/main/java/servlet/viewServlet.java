@@ -38,6 +38,18 @@ public class viewServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int id = Integer.valueOf(request.getParameter("id"));
+		
+		Employee e = EmployeeDAO.getEmployeeById(id);
+		//System.out.println(e.firstName);
+		
+		response.setContentType("text/html");		
+		PrintWriter out = response.getWriter();
+		
+		out.print("<p>" + e.firstName + "</p>");
+		
+		
+		
 		
 	}
 

@@ -93,6 +93,41 @@ public class EmployeeDAO {
 		
 	}
 	
+	public static Employee getEmployeeById(int id) {
+		System.out.println("getting by id");
+		Employee emp = new Employee();
+		
+		try {
+			Connection con = EmployeeDAO.getConnection();
+			
+			CallableStatement stmt = con.prepareCall("{call GetEmployeeDetailsById(?)}");
+			stmt.setInt(1, id);
+			
+			ResultSet rs = stmt.executeQuery();
+			System.out.println("result: " + rs);
+			
+			while(rs.next()) {
+			emp.id = rs.getInt(1);
+			emp.firstName = rs.getString(2);
+			emp.lastName = rs.getString(3);
+			emp.userName = rs.getString(4);
+			emp.password = rs.getString(5);
+			emp.address = rs.getString(6);
+			emp.contact = rs.getString(7);	
+			}
+			
+			System.out.println(emp.firstName);
+			
+		}
+		catch(SQLException e) {
+			System.out.println(e.getMessage());
+			
+		}
+		return emp;
+		
+		
+	}
+	
 	public static void main(String[] args) {
 		insertEmployee();
 	}

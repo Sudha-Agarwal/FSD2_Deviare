@@ -22,6 +22,8 @@ public class saveServlet extends HttpServlet {
     }
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String userName = request.getParameter("userName");
@@ -50,7 +52,8 @@ public class saveServlet extends HttpServlet {
 		else {
 			out.print("Record insertion Error");
 			RequestDispatcher rd = request.getRequestDispatcher("employeeregister.html");
-			rd.include(request, response);			
+			rd.include(request, response);	
+			
 		}
 		
 		
