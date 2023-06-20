@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>JSPTutorial</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>MyServlet</display-name>
+    <servlet-name>MyServlet</servlet-name>
+   <jsp-file>/ImplicitObjects.jsp</jsp-file>
+   <init-param>
+   	<param-name>param1</param-name>
+   	<param-value>Value1</param-value>   	
+   </init-param>
+   <init-param>
+   	<param-name>param2</param-name>
+   	<param-value>Value2</param-value>   
+   </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/ImplicitObjects</url-pattern>
+  </servlet-mapping>  
+  <context-param>
+  	<param-name>dbDriver</param-name>
+  	<param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>  
+  <context-param>
+  	<param-name>dbUrl</param-name>
+  	<param-value>jdbc:mysql://localhost/simplilearn2</param-value>
+  </context-param> 
+  
+</web-app>

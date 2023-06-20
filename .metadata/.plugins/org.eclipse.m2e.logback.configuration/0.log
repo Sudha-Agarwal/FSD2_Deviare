@@ -510,3 +510,4 @@ java.net.URISyntaxException: Illegal character in path at index 21: file:/C:/Use
 2023-06-19 17:03:48,799 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-06-19 17:03:48,801 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gaurav Agarwal\workspace_SimpliLearn_Phase2_Devaire\JDBCTutorial\src\main\resources
 2023-06-19 17:03:48,804 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-06-19 17:03:48,808 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gaurav Agarwal\workspace_SimpliLearn_Phase2_Devaire\JDBCTutorial\src\test\resources
