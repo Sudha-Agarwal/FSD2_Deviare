@@ -13,27 +13,36 @@
     <description></description>
     <display-name>MyServlet</display-name>
     <servlet-name>MyServlet</servlet-name>
-   <jsp-file>/ImplicitObjects.jsp</jsp-file>
-   <init-param>
-   	<param-name>param1</param-name>
-   	<param-value>Value1</param-value>   	
-   </init-param>
-   <init-param>
-   	<param-name>param2</param-name>
-   	<param-value>Value2</param-value>   
-   </init-param>
+    <jsp-file>/ImplicitObjects.jsp</jsp-file>
+    <init-param>
+      <param-name>param1</param-name>
+      <param-value>Value1</param-value>
+    </init-param>
+    <init-param>
+      <param-name>param2</param-name>
+      <param-value>Value2</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>MyServlet</servlet-name>
     <url-pattern>/ImplicitObjects</url-pattern>
-  </servlet-mapping>  
+  </servlet-mapping>
   <context-param>
-  	<param-name>dbDriver</param-name>
-  	<param-value>com.mysql.jdbc.Driver</param-value>
-  </context-param>  
+    <param-name>dbDriver</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
   <context-param>
-  	<param-name>dbUrl</param-name>
-  	<param-value>jdbc:mysql://localhost/simplilearn2</param-value>
-  </context-param> 
-  
+    <param-name>dbUrl</param-name>
+    <param-value>jdbc:mysql://localhost/simplilearn2</param-value>
+  </context-param>
+  <servlet>
+    <description></description>
+    <display-name>CustomTag</display-name>
+    <servlet-name>CustomTag</servlet-name>
+    <servlet-class>tagLib.CustomTag</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomTag</servlet-name>
+    <url-pattern>/CustomTag</url-pattern>
+  </servlet-mapping>
 </web-app>
