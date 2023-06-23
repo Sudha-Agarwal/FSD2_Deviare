@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="persistence">
+
+    <class name="Recipe" table="recipes">
+        <id name="id" column="id" type="long">
+            <generator class="identity" />
+        </id>
+        <property name="name" column="name" type="string" />
+
+        <list name="ingredients" table="recipe_ingredients" cascade="all">
+            <key column="recipe_id" />
+            <index column="ingredient_order" />
+            <element column="ingredient" type="string" />
+        </list>
+    </class>
+
+</hibernate-mapping>

@@ -1,5 +1,8 @@
 package persistence;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,10 +26,43 @@ public class Employee {
 	@JoinColumn(name="dept_id")
 	private Department department;
 	
+	
+	public Set<Meeting> getMeetings() {
+		return meetings;
+	}
+
+
+	public void setMeetings(Set<Meeting> meetings) {
+		this.meetings = meetings;
+	}
+
+
+	@ManyToMany
+	@JoinTable(name="employee_meeting",
+		joinColumns = {@JoinColumn(name="employee_id")},
+		inverseJoinColumns = {@JoinColumn(name="meeting_id")}
+			)
+	private Set<Meeting> meetings = new HashSet<>();
+	
+	/*
+	@OneToOne
+	@JoinColumn(name="address_id")
+	private Address address1;
+	*/
 	public int getId() {
 		return id;
 	}
 
+
+	/*public Address getAddress1() {
+		return address1;
+	}
+
+
+	public void setAddress1(Address address1) {
+		this.address1 = address1;
+	}
+*/
 
 	public void setId(int id) {
 		this.id = id;

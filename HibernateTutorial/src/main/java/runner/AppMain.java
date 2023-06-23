@@ -1,6 +1,7 @@
 package runner;
 
 import java.util.Arrays;
+import java.util.Date;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,6 +12,7 @@ import org.hibernate.service.ServiceRegistry;
 
 import persistence.Department;
 import persistence.Employee;
+import persistence.Meeting;
 
 public class AppMain {
 	
@@ -56,6 +58,25 @@ public class AppMain {
 			
 			dept1.setEmpList(Arrays.asList(e1));
 			dept2.setEmpList(Arrays.asList(e2));
+			
+			Meeting meeting1 = new Meeting();
+			meeting1.setSubject("AGM");
+			meeting1.setMeetingDate(new Date(0));
+			
+			Meeting meeting2 = new Meeting();
+			meeting2.setSubject("sales meeting");
+			meeting2.setMeetingDate(new Date(0));
+			
+			sessionObj.save(meeting2);
+			sessionObj.save(meeting1);
+			
+			
+			e1.getMeetings().add(meeting1);
+			e1.getMeetings().add(meeting2);
+			
+			e2.getMeetings().add(meeting1);
+			
+		
 			
 			
 			sessionObj.save(e1);
